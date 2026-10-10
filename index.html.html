@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Well Soon, Thoi 💗</title>
+<style>
+  :root{--pink:#ff4f87;--deep:#9f174d;--rose:#ffe0eb;--cream:#fff8fb;--lilac:#f5e8ff;--ink:#57223b}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:linear-gradient(135deg,#fff8fb,#ffe4ee 48%,#f8eaff);color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif;overflow-x:hidden}
+  button{font:inherit;cursor:pointer}
+  .hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+  .heart{position:absolute;bottom:-50px;opacity:.7;animation:floatUp linear forwards;filter:drop-shadow(0 3px 4px #ff8cb755)}
+  @keyframes floatUp{to{transform:translateY(-115vh) rotate(28deg);opacity:0}}
+  header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:15px clamp(18px,5vw,72px);background:#fff8f2dd;backdrop-filter:blur(12px);border-bottom:1px solid #ffc5d9}
+  .brand{font-weight:900;font-size:clamp(18px,2.3vw,28px);color:var(--deep);letter-spacing:.2px}
+  .brand span{color:var(--pink)}
+  nav{display:flex;gap:22px;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:700}
+  nav a:hover{color:var(--pink)}
+  .hero{min-height:580px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:28px;padding:56px clamp(22px,7vw,100px);position:relative;isolation:isolate}
+  .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 25% 35%,#fff 0%,#fff7fa99 40%,transparent 72%);z-index:-1}
+  .eyebrow{font-size:18px;color:#c4386c;font-weight:800;letter-spacing:1px}
+  h1{font-size:clamp(42px,6.2vw,78px);line-height:1.02;color:#a4154b;margin:12px 0 20px;letter-spacing:-2px}
+  h1 em{font-style:normal;color:var(--pink)}
+  .intro{font-size:18px;line-height:1.8;max-width:560px}
+  .primary{border:0;border-radius:999px;padding:16px 25px;background:linear-gradient(100deg,#ff6a9a,#f52f77);color:#fff;font-weight:800;box-shadow:0 8px 20px #ed4d8850;transition:.2s}
+  .primary:hover{transform:translateY(-3px);box-shadow:0 12px 25px #ed4d8870}
+  .hero-art{position:relative;min-height:390px;display:grid;place-items:center}
+  .glow{position:absolute;width:min(90%,440px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff9fc 0%,#ffc5dc 62%,#f5b5d5 100%);box-shadow:0 25px 70px #d84f8b25}
+  .teddy{position:relative;font-size:clamp(150px,22vw,255px);filter:drop-shadow(0 15px 12px #a9325b25);animation:bob 3.4s ease-in-out infinite;z-index:1}
+  @keyframes bob{50%{transform:translateY(-12px) rotate(2deg)}}
+  .hug-heart{position:absolute;z-index:2;bottom:48px;left:50%;transform:translateX(-50%) rotate(-7deg);background:#ff5b8b;color:white;border-radius:48% 48% 45% 45%;padding:18px 23px;font-size:18px;font-weight:900;box-shadow:0 8px 18px #a61b4c35;white-space:nowrap}
+  .float-note{position:absolute;background:#fffafc;padding:13px 16px;border-radius:14px;box-shadow:0 8px 22px #b9436a20;font-weight:800;transform:rotate(-7deg)}
+  .note-one{top:10%;right:0}.note-two{bottom:12%;left:0;transform:rotate(6deg)}
+  .spark{position:absolute;font-size:28px;animation:twinkle 1.7s infinite alternate}
+  .s1{top:12%;left:12%}.s2{right:10%;bottom:20%;animation-delay:.6s}.s3{right:18%;top:25%;animation-delay:.9s}
+  @keyframes twinkle{to{transform:scale(1.35) rotate(14deg);opacity:.55}}
+  .cards{padding:8px clamp(18px,6vw,84px) 60px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:#ffffffa8;border:1px solid #ffd1e0;border-radius:24px;padding:26px 22px;text-align:center;box-shadow:0 10px 30px #c4497510;transition:.25s}
+  .card:hover{transform:translateY(-5px);background:#fff}
+  .icon{font-size:38px;display:block;margin-bottom:10px}
+  .card h3{margin:6px 0 10px;color:#a4154b;font-size:21px}
+  .card p{line-height:1.65;margin:0}
+  section.message-area{padding:10px clamp(18px,7vw,100px) 70px}
+  .section-title{text-align:center;font-size:clamp(30px,4vw,45px);color:#a4154b;margin:0 0 28px}
+  .letter-wrap{max-width:850px;margin:auto;background:#fffdfb;border-radius:12px;padding:clamp(24px,5vw,52px);box-shadow:0 16px 35px #b93c681c;border:1px solid #ffcada;position:relative}
+  .letter-wrap:before{content:"";position:absolute;inset:12px;border:1px dashed #ffc0d5;border-radius:7px;pointer-events:none}
+  .letter{font-family:Georgia,serif;font-size:18px;line-height:1.9;position:relative}
+  .letter h3{font-family:"Trebuchet MS",Arial,sans-serif;color:#bf2d64;font-size:27px;margin-top:0}
+  .signature{font-weight:bold;color:#bd285e;font-size:20px}
+  .care{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+  .care button{border:1px solid #ffd0df;border-radius:18px;padding:20px 12px;background:#fff9fc;color:var(--deep);font-weight:800;transition:.2s}
+  .care button:hover{background:#ffe4ee;transform:scale(1.03)}
+  .care span{display:block;font-size:28px;margin-bottom:8px}
+  .surprise{display:none;margin:28px auto 0;max-width:680px;text-align:center;background:#fff;border-radius:22px;padding:28px;border:2px solid #ffc0d5;box-shadow:0 10px 30px #b93c681b;animation:pop .35s ease-out}
+  .surprise.show{display:block}
+  @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+  .surprise h3{color:#c22561;font-size:28px;margin:0 0 10px}
+  footer{text-align:center;padding:30px 18px 38px;background:#ffe0eb;color:#a4154b;font-weight:800}
+  footer small{display:block;margin-top:8px;color:#8f4160;font-weight:500}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,130px);z-index:20;background:#9f174d;color:white;padding:14px 22px;border-radius:999px;box-shadow:0 10px 30px #7b103e35;transition:.35s;text-align:center;max-width:90vw}
+  .toast.show{transform:translate(-50%,0)}
+  @media(max-width:760px){header{padding:13px 18px}nav{gap:12px}nav a{font-size:12px}.hero{grid-template-columns:1fr;padding-top:42px;text-align:center;gap:4px}.intro{margin:0 auto 22px}.hero-art{min-height:330px}.teddy{font-size:190px}.hug-heart{bottom:35px}.cards{grid-template-columns:1fr;padding-bottom:38px}.care{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:450px){nav a:nth-child(2),nav a:nth-child(3){display:none}.brand{font-size:18px}.hero{padding-left:18px;padding-right:18px}h1{letter-spacing:-1px}.intro{font-size:16px}.hero-art{min-height:285px}.teddy{font-size:160px}.hug-heart{font-size:15px;padding:13px 17px;bottom:26px}.note-one{right:-2px}.note-two{left:-2px}.float-note{font-size:12px;padding:10px}}
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+<header>
+  <div class="brand">💗 Get Well Soon, <span>Thoi</span> 💕</div>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#message">My Message</a><a href="#care">Care Tips</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div>
+      <div class="eyebrow">A little hug from me to you ♡</div>
+      <h1>Get Well <em>Soon!</em><br>My Thoi 💗</h1>
+      <p class="intro">I wish I could be right beside you, bring you your favourite things, and give you the biggest hug. Until then, here's a tiny corner of the internet made just to remind you how loved you are.</p>
+      <button class="primary" id="loveBtn">♥ Click for a little love</button>
+    </div>
+    <div class="hero-art" aria-label="A cute teddy bear holding a heart">
+      <div class="glow"></div>
+      <div class="spark s1">✦</div><div class="spark s2">♡</div><div class="spark s3">✧</div>
+      <div class="float-note note-one">Rest up, cutie 🌷</div>
+      <div class="teddy" role="img" aria-label="teddy bear">🧸</div>
+      <div class="hug-heart">You are so loved ♡</div>
+      <div class="float-note note-two">One day at a time ☁️</div>
+    </div>
+  </section>
+  <section class="cards" aria-label="Little reminders">
+    <article class="card"><span class="icon">💖</span><h3>You're Amazing</h3><p>Even on the days you don't feel your best, you're still my favourite person.</p></article>
+    <article class="card"><span class="icon">☁️</span><h3>Rest Is Productive</h3><p>You don't have to do everything today. Take it slow and let yourself rest.</p></article>
+    <article class="card"><span class="icon">🌈</span><h3>Better Days Ahead</h3><p>This is a little bump in the road. I can't wait to see you smiling again.</p></article>
+  </section>
+  <section class="message-area" id="message">
+    <h2 class="section-title">A little note for you 💌</h2>
+    <div class="letter-wrap">
+      <div class="letter">
+        <h3>My dearest Thoi, ♡</h3>
+        <p>I know you're not feeling well right now, and I wish I could take all the discomfort away and make you feel better instantly.</p>
+        <p>For now, please be gentle with yourself. Get some rest, drink some water, and don't feel like you need to be strong every second. You deserve care, comfort, and all the softness in the world.</p>
+        <p>Even when I'm not right next to you, I'm cheering for you and sending you a million hugs and kisses. I hope this little website makes you smile, even for a moment.</p>
+        <p>Get well soon, my love. The world feels brighter when you're happy. 💗</p>
+        <p class="signature">With all my love,<br>Your SK ♡</p>
+      </div>
+    </div>
+  </section>
+  <section class="message-area" id="care">
+    <h2 class="section-title">Your tiny care corner 🌸</h2>
+    <div class="care">
+      <button data-message="Tiny reminder: take a comfy break, close your eyes, and let yourself rest. 💤"><span>🛏️</span>Rest a little</button>
+      <button data-message="A little sip of water for my favourite girl. Keep following any care advice you've been given. 💧"><span>🥤</span>Have some water</button>
+      <button data-message="Sending you 100 virtual hugs, 100 forehead kisses, and 1 giant cuddle. 🤗"><span>🤗</span>Virtual hug</button>
+      <button data-message="Important reminder: you are loved on your low-energy days just as much as every other day. 💗"><span>💌</span>Remember this</button>
+    </div>
+    <div class="surprise" id="surprise" aria-live="polite">
+      <h3>Surprise, my Thoi! 💗</h3>
+      <p>Imagine me giving you the warmest hug and whispering: “You're my favourite person. Take your time getting better — I'll be right here cheering you on.”</p>
+      <div style="font-size:32px;margin-top:12px">💗 🧸 🌷 💗</div>
+    </div>
+  </section>
+</main>
+<footer>
+  Made with all my love, just for Thoi 💗
+  <small>Sending you warmth, hugs, and the gentlest little kisses. Feel better soon. ♡</small>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+  const heartField = document.getElementById('hearts');
+  const symbols = ['💗','💕','♡','💖','♥'];
+  function floatHeart(){
+    const el = document.createElement('span');
+    el.className = 'heart';
+    el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left = Math.random()*100+'%';
+    el.style.fontSize = (14+Math.random()*22)+'px';
+    const duration = 6+Math.random()*6;
+    el.style.animationDuration = duration+'s';
+    heartField.appendChild(el);
+    setTimeout(()=>el.remove(), duration*1000);
+  }
+  for(let i=0;i<12;i++) setTimeout(floatHeart, i*350);
+  setInterval(floatHeart, 650);
+
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  function showToast(message){
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>toast.classList.remove('show'), 3400);
+  }
+  document.getElementById('loveBtn').addEventListener('click',()=>{
+    document.getElementById('surprise').classList.add('show');
+    document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'center'});
+    showToast('A thousand hugs are on their way to Thoi! 💗');
+    for(let i=0;i<22;i++) setTimeout(floatHeart,i*70);
+  });
+  document.querySelectorAll('.care button').forEach(button=>{
+    button.addEventListener('click',()=>showToast(button.dataset.message));
+  });
+</script>
+</body>
+</html>
